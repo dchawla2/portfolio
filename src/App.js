@@ -30,16 +30,16 @@ class App extends Component {
   }
 
   swapCurrentlyActiveLanguage(oppositeLangIconId) {
-    var pickedLangIconId =
-      oppositeLangIconId === window.$primaryLanguageIconId
-        ? window.$secondaryLanguageIconId
-        : window.$primaryLanguageIconId;
-    document
-      .getElementById(oppositeLangIconId)
-      .removeAttribute("filter", "brightness(40%)");
-    document
-      .getElementById(pickedLangIconId)
-      .setAttribute("filter", "brightness(40%)");
+    // var pickedLangIconId =
+    //   oppositeLangIconId === window.$primaryLanguageIconId
+    //     ? window.$secondaryLanguageIconId
+    //     : window.$primaryLanguageIconId;
+    // document
+    //   .getElementById(oppositeLangIconId)
+    //   .removeAttribute("filter", "brightness(40%)");
+    // document
+    //   .getElementById(pickedLangIconId)
+    //   .setAttribute("filter", "brightness(40%)");
   }
 
   componentDidMount() {
@@ -83,8 +83,8 @@ class App extends Component {
     return (
       <div>
         <Header sharedData={this.state.sharedData.basic_info} />
-        <div className="col-md-12 mx-auto text-center language">
-          <div
+        {<div className="col-md-12 mx-auto text-center language">
+          {/* <div
             onClick={() =>
               this.applyPickedLanguage(
                 window.$primaryLanguage,
@@ -95,7 +95,7 @@ class App extends Component {
           >
             <span
               className="iconify language-icon mr-5"
-              data-icon="twemoji-flag-for-flag-united-kingdom"
+              data-icon="twemoji-flag-for-flag-united-states"
               data-inline="false"
               id={window.$primaryLanguageIconId}
             ></span>
@@ -111,12 +111,12 @@ class App extends Component {
           >
             <span
               className="iconify language-icon"
-              data-icon="twemoji-flag-for-flag-poland"
+              data-icon="twemoji-flag-for-flag-india"
               data-inline="false"
               id={window.$secondaryLanguageIconId}
             ></span>
-          </div>
-        </div>
+          </div> */}
+        </div>}
         <About
           resumeBasicInfo={this.state.resumeData.basic_info}
           sharedBasicInfo={this.state.sharedData.basic_info}
